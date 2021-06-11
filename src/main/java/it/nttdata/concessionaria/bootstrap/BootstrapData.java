@@ -27,13 +27,13 @@ public class BootstrapData implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         Concessionario c1 = new Concessionario();
-        c1.setNome("Concessionario 1");
+        c1.setNome("Concessionario1");
         c1.setVia("Via roma 23");
         c1.setCitta("Roma");
         c1.setRegione(Regione.LAZIO);
 
         Concessionario c2 = new Concessionario();
-        c2.setNome("Concessionario 2");
+        c2.setNome("Concessionario2");
         c2.setVia("Via milano 35");
         c2.setCitta("Milano");
         c2.setRegione(Regione.LOMBARDIA);
