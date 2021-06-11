@@ -17,6 +17,6 @@ public class AutoController {
     @GetMapping("/automobili")
     public String getAuto(Model model){
         model.addAttribute("automobili",autoRepository.findAll());
-        return "auto";
+        return "automobili";
     }
 }
