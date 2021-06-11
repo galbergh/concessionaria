@@ -2,7 +2,7 @@ package it.nttdata.concessionaria.models;
 
 public enum Regione {
 
-    ABBRUZZO,
+    ABRUZZO,
     LAZIO,
     LOMBARDIA,
     PIEMONTE,
