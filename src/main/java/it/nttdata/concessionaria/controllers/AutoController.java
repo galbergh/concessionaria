@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 public class AutoController {
@@ -28,8 +30,8 @@ public class AutoController {
     @GetMapping("/automobiliconcessionario/{nomeConcessionario}")
     public String getAutoConcessionario(Model model, @PathVariable ("nomeConcessionario") String nomeConcessionario){
         ArrayList<Auto> listaAuto = (ArrayList<Auto>) autoRepository.findAll();
-        listaAuto.stream().filter(auto -> auto.getConcessionario().getNome().equals(nomeConcessionario));
-        model.addAttribute("automobili",listaAuto);
+        List<Auto> ans = listaAuto.stream().filter(c -> c.getConcessionario().getNome().equals(nomeConcessionario)).collect(Collectors.toList());
+        model.addAttribute("automobili",ans);
         return "automobili";
     }
 }
